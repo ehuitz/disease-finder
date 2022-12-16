@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ICDAPIController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,6 +28,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // ICD Integrations
+ Route::get('icd-token/',[ICDAPIController::class, 'getToken'])->name('icd.token');
+
 });
+
 
 require __DIR__.'/auth.php';
