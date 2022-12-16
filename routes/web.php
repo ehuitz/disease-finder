@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ICDAPIController;
+use App\Http\Controllers\SearchController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,7 +33,7 @@ Route::middleware('auth')->group(function () {
 
     // ICD Integrations
  Route::get('icd-token/',[ICDAPIController::class, 'getToken'])->name('icd.token');
-
+ Route::post('save', [SearchController::class, 'store']);
 });
 
 

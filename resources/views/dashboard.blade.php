@@ -1,5 +1,5 @@
 <x-app-layout>
-    
+
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Dashboard') }}
@@ -10,19 +10,28 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
+
+                    {{-- add save search form here --}}
                     <div class="m-8">
-                        <label for="disease-search" class="block text-sm font-medium text-gray-700">Disease Search - atleast 3 characters</label>
+
+                        <label for="disease-search" class="block text-sm font-medium text-gray-700">Disease Search -
+                            atleast 3 characters</label>
                         <!-- input element used for typing the search  -->
-                        <input id="disease-search" type="text" class="ctw-input block w-full rounded-md border-gray-300 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"" autocomplete="off" data-ctw-ino="1">
+                        <input id="disease-search" type="text"
+                            class="ctw-input block w-full rounded-md border-gray-300 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm""
+                            autocomplete="off" data-ctw-ino="1">
                         <!-- div element used for showing the search results -->
-                                <div class="ctw-window relative" data-ctw-ino="1"></div>
-                        </div>
+                        <div class="ctw-window relative" data-ctw-ino="1"></div>
                     </div>
+
+
+
                 </div>
-
-
             </div>
+
+
         </div>
+    </div>
     </div>
 
 
